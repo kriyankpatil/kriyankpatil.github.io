@@ -27,6 +27,7 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -275,6 +276,20 @@
       </div>
     </section>
 
+    <!-- RESUME -->
+    <section class="section" id="resume">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <div class="card resume-preview">
+          <iframe id="resume-frame" title="Kriyank Patil resume preview" loading="lazy"></iframe>
+          <p class="resume-fallback" hidden>Preview couldn't load here. <a href="#" data-resume-download>Download the resume</a> instead.</p>
+        </div>
+        <div class="resume-actions">
+          <a class="btn btn-primary" href="#" data-resume-download>Download Resume</a>
+        </div>
+      </div>
+    </section>
+
     <!-- CONTACT -->
     <section class="section section-alt" id="contact">
       <div class="container contact-inner">
@@ -334,30 +349,62 @@
       });
     })();
 
-    // Resume download: the PDF is stored base64-encoded (assets/resume.pdf.b64)
-    // because it decodes to a valid PDF on click.
+    // Resume: the PDF is stored base64-encoded (assets/resume.pdf.b64).
+    // One shared fetch decodes it once; the preview iframe and the
+    // download buttons both use the resulting blob URL.
     (function () {
-      function downloadResume(e) {
-        e.preventDefault();
-        fetch('assets/resume.pdf.b64')
-          .then(function (r) { if (!r.ok) throw new Error('fetch failed'); return r.text(); })
-          .then(function (b64) {
-            var bin = atob(b64.trim());
-            var bytes = new Uint8Array(bin.length);
-            for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-            var url = URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
-            var a = document.createElement('a');
-            a.href = url;
-            a.download = 'Kriyank-Patil-Resume.pdf';
-            document.body.appendChild(a);
-            a.click();
-            setTimeout(function () { URL.revokeObjectURL(url); a.remove(); }, 2000);
-          })
-          .catch(function () { window.location.href = 'assets/resume.pdf.b64'; });
+      var resumeUrlPromise = null;
+      function getResumeUrl() {
+        if (!resumeUrlPromise) {
+          resumeUrlPromise = fetch('assets/resume.pdf.b64')
+            .then(function (r) { if (!r.ok) throw new Error('fetch failed'); return r.text(); })
+            .then(function (b64) {
+              var bin = atob(b64.trim());
+              var bytes = new Uint8Array(bin.length);
+              for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+              return URL.createObjectURL(new Blob([bytes], { type: 'application/pdf' }));
+            });
+        }
+        return resumeUrlPromise;
       }
+
       document.querySelectorAll('[data-resume-download]').forEach(function (a) {
-        a.addEventListener('click', downloadResume);
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          getResumeUrl()
+            .then(function (url) {
+              var tmp = document.createElement('a');
+              tmp.href = url;
+              tmp.download = 'Kriyank-Patil-Resume.pdf';
+              document.body.appendChild(tmp);
+              tmp.click();
+              setTimeout(function () { tmp.remove(); }, 2000);
+            })
+            .catch(function () { window.location.href = 'assets/resume.pdf.b64'; });
+        });
       });
+
+      var frame = document.getElementById('resume-frame');
+      if (frame) {
+        var loadPreview = function () {
+          getResumeUrl()
+            .then(function (url) { frame.src = url; })
+            .catch(function () {
+              var fb = document.querySelector('.resume-fallback');
+              if (fb) fb.hidden = false;
+            });
+        };
+        if ('IntersectionObserver' in window) {
+          var obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) { obs.disconnect(); loadPreview(); }
+            });
+          }, { rootMargin: '400px' });
+          obs.observe(frame);
+        } else {
+          loadPreview();
+        }
+      }
     })();
   </script>
 </body>

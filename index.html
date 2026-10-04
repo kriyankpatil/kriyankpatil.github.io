@@ -1,240 +1,338 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f5f2eb">
-    <meta name="description" content="Kriyank Patil is an early-career data analyst working with Python, Excel, SAP Analytics Cloud, and data visualization. Explore projects, internships, and verified credentials.">
-    <title>Kriyank Patil — Data Analyst</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kriyank Patil — Data Analyst based in Silvassa, India. SAP Certified Associate in Data Analytics (SAP Analytics Cloud). Python, Excel, dashboards, and data storytelling.">
+  <title>Kriyank Patil — Data Analyst</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231d4ed8'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='bold' text-anchor='middle' fill='white'%3EK%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Kriyank Patil, home">
-          <span class="brand-mark" aria-hidden="true"><img class="brand-photo" src="profile-photo.jpg" alt=""><span>↗</span></span>
-          <span class="brand-copy"><strong>Kriyank Patil</strong><small>DATA ANALYST</small></span>
-        </a>
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#journey">Journey</a>
-          <a href="#credentials">Credentials</a>
-        </nav>
-        <a class="header-contact" href="https://www.linkedin.com/in/kriyank/" target="_blank" rel="noreferrer">
-          Let’s talk <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Kriyank Patil — home">
+        <span class="brand-mark" aria-hidden="true">K</span>
+        <span class="brand-name">Kriyank Patil</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary btn-small header-cta" href="assets/resume.pdf" download>Resume</a>
+    </div>
+  </header>
 
-    <main id="main">
-      <section class="hero page-shell" id="top" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow"><span class="status-dot"></span> EARLY-CAREER DATA ANALYST <i>·</i> SILVASSA, INDIA</p>
-          <h1 id="hero-title">I follow<br>the <em>signal</em><br>in data<span class="period">.</span></h1>
-          <p class="hero-intro">I’m Kriyank — curious about the questions behind the numbers, and how clear analysis can help people make a better next move.</p>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Silvassa, India &middot; Open to opportunities</p>
+          <h1>Kriyank Patil</h1>
+          <p class="hero-title">Data Analyst</p>
+          <p class="hero-summary">
+            Early-career data analyst with an Information Technology background and 350+ hours
+            of structured analytics training. I turn messy data into clear, decision-ready
+            insights using Python, Excel, and BI tools.
+          </p>
           <div class="hero-actions">
-            <a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
-            <a class="button button-outline" href="https://www.linkedin.com/in/kriyank/" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-primary" href="assets/resume.pdf" download>Download Resume</a>
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
           </div>
-          <div class="hero-note"><span class="note-rule"></span><span>Python · Excel · SAP Analytics Cloud · IBM Cognos</span></div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/kriyank" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+            </a>
+            <a href="https://github.com/kriyankpatil" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></svg>
+            </a>
+            <a href="mailto:kriyankpatil165@gmail.com" aria-label="Send email">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </a>
+          </div>
         </div>
-
-        <div class="hero-art" aria-label="Illustration of an analysis moving from a question, through evidence, to an insight">
-          <div class="art-topline"><span>FIELD NOTES / 001</span><span>THE ANALYSIS LOOP</span></div>
-          <div class="art-grid" aria-hidden="true"></div>
-          <svg class="signal-map" viewBox="0 0 580 480" role="img" aria-labelledby="signal-title signal-desc">
-            <title id="signal-title">From question to signal</title>
-            <desc id="signal-desc">A flowing line connects three points: question, evidence, and insight.</desc>
-            <path class="contour contour-one" d="M32 170C103 70 199 66 265 133s152 70 272-44"/>
-            <path class="contour contour-two" d="M10 204c84-99 169-98 246-27s165 82 300-31"/>
-            <path class="contour contour-three" d="M-9 236c91-93 181-91 263-24s180 94 332-19"/>
-            <path class="flow-shadow" d="M71 323C142 306 167 151 278 173s110 166 228 42"/>
-            <path class="flow-line" d="M71 323C142 306 167 151 278 173s110 166 228 42"/>
-            <path class="flow-trail" d="M71 323C142 306 167 151 278 173s110 166 228 42"/>
-            <g class="map-point point-one"><circle r="28" cx="71" cy="323"/><circle class="point-core" r="5" cx="71" cy="323"/></g>
-            <g class="map-point point-two"><circle r="28" cx="278" cy="173"/><circle class="point-core" r="5" cx="278" cy="173"/></g>
-            <g class="map-point point-three"><circle r="28" cx="506" cy="215"/><circle class="point-core" r="5" cx="506" cy="215"/></g>
-            <text class="map-index" x="46" y="381">01 / ASK</text>
-            <text class="map-index" x="247" y="126">02 / CHECK</text>
-            <text class="map-index" x="462" y="275">03 / EXPLAIN</text>
-            <circle class="map-spark" cx="416" cy="139" r="4"/>
-            <circle class="map-spark spark-b" cx="187" cy="237" r="3"/>
-          </svg>
-          <div class="art-caption"><span>Question → evidence → insight</span><span class="caption-mark">KP / 2026</span></div>
-          <div class="hero-photo-chip"><img src="profile-photo.jpg" alt="Kriyank Patil"><span>KRIYANK PATIL</span><small>DATA ANALYST</small></div>
-        </div>
-        <div class="hero-side-note" aria-hidden="true"><span>DATA, WITH A HUMAN QUESTION AT THE CENTER</span><span>01—03</span></div>
-      </section>
-
-      <div class="marquee" aria-label="Ask better questions. Make data clearer.">
-        <div class="marquee-track" aria-hidden="true">
-          <span>ASK BETTER QUESTIONS <b>✳</b> MAKE DATA CLEARER <b>✳</b> KEEP THE STORY HONEST <b>✳</b> ASK BETTER QUESTIONS <b>✳</b> MAKE DATA CLEARER <b>✳</b> KEEP THE STORY HONEST <b>✳</b></span>
-          <span>ASK BETTER QUESTIONS <b>✳</b> MAKE DATA CLEARER <b>✳</b> KEEP THE STORY HONEST <b>✳</b> ASK BETTER QUESTIONS <b>✳</b> MAKE DATA CLEARER <b>✳</b> KEEP THE STORY HONEST <b>✳</b></span>
+        <div class="hero-photo">
+          <img src="profile-photo.jpg" alt="Portrait of Kriyank Patil" width="320" height="320">
         </div>
       </div>
+    </section>
 
-      <section class="about section-space page-shell" id="about" aria-labelledby="about-title">
-        <div class="section-index reveal"><span>01</span><span>THE PERSON BEHIND THE QUESTIONS</span><span class="index-line"></span></div>
-        <div class="about-layout">
-          <h2 class="display-heading reveal" id="about-title">Data work starts<br>before the <em>chart.</em></h2>
-          <div class="about-copy reveal">
-            <p class="lead-copy">I enjoy moving from a messy input to a clear takeaway: take care with the data, ask what it can really tell us, then make the answer easy to use.</p>
-            <p>My background in Information Technology connects analytics to how software and data systems fit together. Through internships, coursework, and hands-on projects, I’m building a practical foundation in analysis and business intelligence.</p>
-            <a class="text-arrow" href="https://github.com/kriyankpatil" target="_blank" rel="noreferrer">A little more about what I build <span aria-hidden="true">↗</span></a>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm an early-career data analyst from Silvassa, India, with a Bachelor's degree in
+              Information Technology (Gujarat Technological University) and a Diploma in IT.
+              I completed 350+ hours of structured Data Analytics training with a Data Engineer
+              specialization, and earned the <strong>SAP Certified Associate — Data Analyst
+              (SAP Analytics Cloud)</strong> credential.
+            </p>
+            <p>
+              My approach is straightforward: clean the data carefully, analyse it honestly,
+              and present the findings so a decision-maker can act on them. I've applied this
+              through internships, coursework, and hands-on projects spanning Python analysis,
+              dashboards, and full-stack web development.
+            </p>
+          </div>
+          <ul class="about-facts">
+            <li><span class="fact-label">Location</span><span class="fact-value">Silvassa, India</span></li>
+            <li><span class="fact-label">Degree</span><span class="fact-value">B.E. Information Technology, 2023–2026</span></li>
+            <li><span class="fact-label">Certification</span><span class="fact-value">SAP Certified Associate — Data Analyst</span></li>
+            <li><span class="fact-label">Training</span><span class="fact-value">350+ hours, 27 modules (Data Analytics + Data Engineering)</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="card">
+            <h3>Data Analysis</h3>
+            <ul class="tag-list">
+              <li>Data cleaning</li>
+              <li>Exploratory data analysis</li>
+              <li>Dashboarding</li>
+              <li>Data visualization</li>
+              <li>Data storytelling</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Tools &amp; Platforms</h3>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>pandas</li>
+              <li>Microsoft Excel</li>
+              <li>SAP Analytics Cloud</li>
+              <li>IBM Cognos Analytics</li>
+              <li>SAP HANA (fundamentals)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Development</h3>
+            <ul class="tag-list">
+              <li>Django</li>
+              <li>PostgreSQL</li>
+              <li>Chart.js</li>
+              <li>React</li>
+              <li>TypeScript</li>
+            </ul>
           </div>
         </div>
-        <div class="principles">
-          <article class="principle reveal"><span class="principle-no">A / 01</span><span class="principle-icon icon-question" aria-hidden="true">?</span><h3>Frame it</h3><p>Start with the decision or question that matters.</p></article>
-          <article class="principle reveal"><span class="principle-no">A / 02</span><span class="principle-icon icon-check" aria-hidden="true">⌁</span><h3>Check it</h3><p>Understand the source, definitions, and quality.</p></article>
-          <article class="principle reveal"><span class="principle-no">A / 03</span><span class="principle-icon icon-signal" aria-hidden="true">↗</span><h3>Explain it</h3><p>Show the useful pattern without overselling it.</p></article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="card project-card">
+            <h3>Vehicle Vault</h3>
+            <p>
+              An India-focused car discovery and comparison platform. Browse vehicle
+              specifications, run side-by-side comparisons, and explore market trends through
+              a Chart.js analytics hub.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Django</li>
+              <li>PostgreSQL</li>
+              <li>Chart.js</li>
+            </ul>
+            <a class="card-link" href="https://github.com/kriyankpatil/Vehicle_Vault" target="_blank" rel="noopener">
+              View on GitHub
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+          </article>
+          <article class="card project-card">
+            <h3>Rule-Based Expert Chatbot</h3>
+            <p>
+              A document-assistant flow that extracts and normalizes content from PDFs, images,
+              and plain text, then matches questions against defined rules to return
+              structured answers.
+            </p>
+            <ul class="tag-list">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>Text processing</li>
+            </ul>
+            <a class="card-link" href="https://github.com/kriyankpatil/Chat-Bot" target="_blank" rel="noopener">
+              View on GitHub
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+          </article>
         </div>
-      </section>
+        <p class="more-link">More work on <a href="https://github.com/kriyankpatil?tab=repositories" target="_blank" rel="noopener">GitHub</a></p>
+      </div>
+    </section>
 
-      <section class="work section-space" id="work" aria-labelledby="work-title">
-        <div class="work-inner page-shell">
-          <div class="section-index reveal"><span>02</span><span>SELECTED PROJECTS</span><span class="index-line"></span></div>
-          <div class="work-heading reveal">
-            <h2 class="display-heading" id="work-title">Made to make<br><em>things clearer.</em></h2>
-            <p>Two projects that bring together analytical thinking, practical software, and useful ways to explore information.</p>
-          </div>
-
-          <article class="project project-vehicle reveal">
-            <div class="project-visual vehicle-visual">
-              <div class="visual-label"><span>01 / PRODUCT EXPLORATION</span><span>CONCEPT ILLUSTRATION</span></div>
-              <div class="vehicle-window">
-                <div class="window-top"><span class="window-logo"><b>V</b> VEHICLE VAULT</span><span class="window-state"><i></i> DISCOVER</span></div>
-                <div class="vehicle-window-body">
-                  <aside class="vehicle-filter">
-                    <span class="filter-title">NARROW YOUR SEARCH</span>
-                    <div class="filter-line"><span>Price range</span><b>⌄</b></div><div class="filter-slider"><i></i></div>
-                    <div class="filter-line"><span>Fuel type</span><b>⌄</b></div>
-                    <div class="fuel-pills"><i>Petrol</i><i>Electric</i></div>
-                    <div class="filter-line"><span>Body style</span><b>⌄</b></div>
-                    <div class="filter-skeleton"></div><div class="filter-skeleton short"></div>
-                  </aside>
-                  <div class="vehicle-results">
-                    <div class="results-heading"><div><small>INDIA · CAR FINDER</small><h3>Find your fit.</h3></div><span>COMPARE ↗</span></div>
-                    <div class="vehicle-cards">
-                      <div class="vehicle-card vehicle-card-a"><span class="car-shape car-a"></span><small>01 / CITY DRIVE</small><b>Explore cars</b><span class="vehicle-card-line"></span></div>
-                      <div class="vehicle-card vehicle-card-b"><span class="car-shape car-b"></span><small>02 / WEEKEND RUN</small><b>Compare specs</b><span class="vehicle-card-line"></span></div>
-                    </div>
-                    <div class="market-strip"><span>SPECIFICATIONS</span><i></i><span>MARKET TRENDS</span><i></i><span>COMPARISON</span></div>
-                  </div>
-                </div>
-              </div>
-              <span class="visual-caption">A visual guide to the product idea — not a screenshot.</span>
-            </div>
-            <div class="project-copy">
-              <div class="project-overline"><span>PYTHON / DJANGO / POSTGRESQL</span><span>01</span></div>
-              <h3>Vehicle Vault</h3>
-              <p class="project-deck">A clearer way to explore the car market.</p>
-              <p>An India-focused car discovery and comparison platform, bringing vehicle specifications, side-by-side comparisons, and a Chart.js analytics hub for market trends into one experience.</p>
-              <div class="project-pills"><span>Python</span><span>Django</span><span>PostgreSQL</span><span>Chart.js</span></div>
-              <a class="text-arrow" href="https://github.com/kriyankpatil/Vehicle_Vault" target="_blank" rel="noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content card">
+              <p class="timeline-date">Jan 2026 — Apr 2026</p>
+              <h3>Python (Django) Intern</h3>
+              <p class="timeline-org">Grownited Private Limited</p>
+              <ul class="timeline-bullets">
+                <li>Supported project understanding and requirements analysis</li>
+                <li>Contributed to technical documentation, development, testing, and quality assurance</li>
+                <li>Prepared project reports tracking progress and outcomes</li>
+              </ul>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>Django</li>
+                <li>Testing &amp; QA</li>
+              </ul>
             </div>
           </article>
-
-          <article class="project project-chatbot reveal">
-            <div class="project-visual document-visual">
-              <div class="visual-label"><span>02 / DOCUMENT ASSISTANT</span><span>PROCESS ILLUSTRATION</span></div>
-              <div class="pipeline">
-                <div class="pipeline-heading"><span>FROM DOCUMENTS TO ANSWERS</span><span class="pipeline-spark">✳</span></div>
-                <div class="pipeline-flow">
-                  <div class="pipeline-step step-file"><span class="file-icon"><i></i><i></i><i></i></span><small>01 · INPUT</small><b>PDF / image<br>or text</b></div>
-                  <span class="flow-connector" aria-hidden="true">→</span>
-                  <div class="pipeline-step step-clean"><span class="clean-icon"><i></i><i></i><i></i></span><small>02 · PREPARE</small><b>Extract &amp;<br>normalize</b></div>
-                  <span class="flow-connector" aria-hidden="true">→</span>
-                  <div class="pipeline-step step-answer"><span class="answer-icon">?</span><small>03 · MATCH</small><b>Find a rule.<br>Form an answer.</b></div>
-                </div>
-                <div class="pipeline-foot"><span>RULE-BASED MATCHING</span><span>STRUCTURED TEXT → RESPONSE</span></div>
-              </div>
-              <span class="visual-caption">A simple map of the project’s documented flow.</span>
-            </div>
-            <div class="project-copy">
-              <div class="project-overline"><span>REACT / TYPESCRIPT / TEXT PROCESSING</span><span>02</span></div>
-              <h3>Rule-Based Expert Chatbot</h3>
-              <p class="project-deck">A document assistant concept built around a practical flow.</p>
-              <p>Processes content from PDFs, images, and plain text, then extracts, cleans, and structures it before matching a question against defined rules.</p>
-              <div class="project-pills"><span>React</span><span>TypeScript</span><span>Text processing</span><span>Rule-based system</span></div>
-              <a class="text-arrow" href="https://github.com/kriyankpatil/Chat-Bot" target="_blank" rel="noreferrer">Explore the repository <span aria-hidden="true">↗</span></a>
+          <article class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div class="timeline-content card">
+              <p class="timeline-date">Jul 2025</p>
+              <h3>Data Analytics Intern</h3>
+              <p class="timeline-org">CSRBOX Foundation — Summer GTU Internship Program</p>
+              <ul class="timeline-bullets">
+                <li>Completed a two-week Data Analytics internship (2–16 July 2025) under the Summer GTU Internship Program, subject code 3170001</li>
+              </ul>
+              <ul class="tag-list">
+                <li>Data Analytics</li>
+              </ul>
             </div>
           </article>
-          <div class="work-footer reveal"><span>MORE TO EXPLORE</span><a href="https://github.com/kriyankpatil?tab=repositories" target="_blank" rel="noreferrer">See all GitHub repositories <span aria-hidden="true">↗</span></a></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="toolkit section-space page-shell" id="toolkit" aria-labelledby="toolkit-title">
-        <div class="section-index reveal"><span>03</span><span>TOOLS &amp; PRACTICE</span><span class="index-line"></span></div>
-        <div class="toolkit-layout">
-          <div class="toolkit-heading reveal"><h2 class="display-heading" id="toolkit-title">The toolkit is<br><em>still growing.</em></h2><p>Tools I’ve studied and used across my training and projects.</p></div>
-          <div class="toolkit-list">
-            <article class="tool-row reveal"><span class="tool-index">01</span><div class="tool-content"><h3>Analyze &amp; prepare</h3><p>Python · pandas · Excel · data cleaning · exploratory analysis</p></div><span class="tool-symbol symbol-brackets" aria-hidden="true">{ }</span></article>
-            <article class="tool-row reveal"><span class="tool-index">02</span><div class="tool-content"><h3>Visualize &amp; explain</h3><p>SAP Analytics Cloud · IBM Cognos Analytics · Chart.js · data storytelling</p></div><span class="tool-symbol symbol-chart" aria-hidden="true">▥</span></article>
-            <article class="tool-row reveal"><span class="tool-index">03</span><div class="tool-content"><h3>Build &amp; deliver</h3><p>Django · PostgreSQL · technical documentation · testing &amp; QA</p></div><span class="tool-symbol symbol-arrow" aria-hidden="true">↗</span></article>
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section-title">Education &amp; Training</h2>
+        <div class="edu-grid">
+          <article class="card">
+            <p class="timeline-date">2023 — 2026</p>
+            <h3>Bachelor of Engineering, Information Technology</h3>
+            <p class="timeline-org">Gujarat Technological University</p>
+          </article>
+          <article class="card">
+            <p class="timeline-date">2020 — 2023</p>
+            <h3>Diploma in Information Technology</h3>
+            <p class="timeline-org">Gujarat Technological University</p>
+          </article>
+          <article class="card">
+            <p class="timeline-date">2024 — 2025</p>
+            <h3>Data Analytics — Data Engineer Specialization</h3>
+            <p class="timeline-org">Educate to Employ · SAP India CSR · Edunet Foundation</p>
+            <p class="card-detail">27 structured modules · 350+ learning hours covering Python, pandas, Excel analysis, SAP HANA, and SAP Analytics Cloud.</p>
+          </article>
+          <article class="card">
+            <p class="timeline-date">2023 — 2024</p>
+            <h3>Code Unnati Foundation Course</h3>
+            <p class="timeline-org">SAP · Edunet Foundation</p>
+            <p class="card-detail">Foundations in Python, data analysis, AI, and SAP Conversational AI Chatbot. Credential ID: CU24_14922.</p>
+          </article>
+        </div>
+
+        <h3 class="subsection-title">Certifications</h3>
+        <div class="cert-featured card">
+          <div class="cert-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
+          </div>
+          <div>
+            <h4>SAP Certified Associate — Data Analyst (SAP Analytics Cloud)</h4>
+            <p>Earned through the Educate to Employ Program, an SAP India CSR initiative implemented by Edunet Foundation.</p>
           </div>
         </div>
-      </section>
+        <ul class="tag-list cert-list">
+          <li>Data Analysis &amp; Visualization Foundations Specialization (V2)</li>
+          <li>Data Analytics Essentials</li>
+          <li>Data Visualization &amp; Dashboard Essentials</li>
+          <li>Excel Essentials for Data Analytics</li>
+          <li>Exploring SAP Analytics Cloud</li>
+          <li>Getting Started with Data (IBM SkillsBuild)</li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="journey section-space" id="journey" aria-labelledby="journey-title">
-        <div class="journey-inner page-shell">
-          <div class="section-index reveal"><span>04</span><span>EXPERIENCE &amp; EDUCATION</span><span class="index-line"></span></div>
-          <div class="journey-heading reveal"><h2 class="display-heading" id="journey-title">Learning by<br><em>doing the work.</em></h2><p>Internships and practical experience that shaped my path into analytics.</p></div>
-          <div class="timeline">
-            <article class="timeline-row reveal"><div class="timeline-date"><span>JAN — APR</span><strong>2026</strong></div><span class="timeline-rail" aria-hidden="true"><i></i></span><div class="timeline-entry"><div class="timeline-meta"><span>INTERNSHIP · SOFTWARE DEVELOPMENT</span><span>20 JAN — 20 APR 2026</span></div><h3>Python (Django) Intern</h3><p class="timeline-org">Grownited Private Limited</p><p>Worked across project and requirements understanding, technical documentation, development, testing, and quality assurance.</p><div class="project-pills"><span>Python</span><span>Django</span><span>Testing &amp; QA</span></div></div></article>
-            <article class="timeline-row reveal"><div class="timeline-date"><span>JUL</span><strong>2025</strong></div><span class="timeline-rail" aria-hidden="true"><i></i></span><div class="timeline-entry"><div class="timeline-meta"><span>SUMMER INTERNSHIP · DATA ANALYTICS</span><span>02 — 16 JUL 2025</span></div><h3>Summer GTU Internship Program</h3><p class="timeline-org">CSRBOX Foundation · Subject code 3170001</p><p>Completed a two-week Data Analytics internship hosted by CSRBOX as part of the Summer GTU Internship Program.</p></div></article>
-          </div>
-          <div class="education-heading reveal">
-            <div><span class="education-kicker">ACADEMIC BACKGROUND / 01</span><h3>Education &amp;<br><em>technical training.</em></h3></div>
-            <p>Formal engineering study and focused analytics programs, with the subjects and credentials shown clearly.</p>
-          </div>
-          <div class="education-grid">
-            <article class="education-card reveal"><span class="education-mark">B.E.</span><div class="education-copy"><div class="education-meta"><span>UNDERGRADUATE DEGREE</span><span>2023–2026</span></div><h4>Bachelor of Engineering in Information Technology</h4><p class="education-provider">R.N.G. Patel Institute of Technology · Gujarat Technological University, Ahmedabad</p><p>Final-year academic project: <a href="https://github.com/kriyankpatil/Vehicle_Vault" target="_blank" rel="noreferrer">Vehicle Vault</a>, a premium car discovery platform.</p></div></article>
-            <article class="education-card reveal"><span class="education-mark">DIP</span><div class="education-copy"><div class="education-meta"><span>DIPLOMA</span><span>2020–2023</span></div><h4>Diploma in Information Technology</h4><p class="education-provider">Dr. Babasaheb Bhimrao Ambedkar Government Polytechnic</p><p>Diploma-level qualification in Information Technology.</p></div></article>
-            <article class="education-card reveal"><span class="education-mark">DA</span><div class="education-copy"><div class="education-meta"><span>EDUCATE TO EMPLOY</span><span>2024–2025</span></div><h4>Data Analytics · Data Engineer specialization</h4><p class="education-provider">R.N.G. Patel Institute of Technology · SAP India CSR · Edunet Foundation</p><p>Completed during the 2024–25 academic year through the Educate to Employ Program.</p></div></article>
-            <article class="education-card reveal"><span class="education-mark">SAP</span><div class="education-copy"><div class="education-meta"><span>SAP CERTIFIED ASSOCIATE</span><span>2024–2025</span></div><h4>Data Analyst — SAP Analytics Cloud</h4><p class="education-provider">Educate to Employ · SAP India CSR · Edunet Foundation</p><p>350+ learning hours across 27 modules, covering Python, pandas, Excel analysis, SAP HANA, and SAP Analytics Cloud.</p></div></article>
-            <article class="education-card reveal"><span class="education-mark">CU</span><div class="education-copy"><div class="education-meta"><span>CODE UNNATI FOUNDATION COURSE</span><span>2023–2024</span></div><h4>Foundations in Python, data analysis &amp; AI</h4><p class="education-provider">SAP and Edunet Foundation · R.N.G. Patel Institute of Technology</p><p>Python Programming · Data Analysis with Python · Artificial Intelligence · SAP Conversational AI Chatbot.</p><span class="education-id">CREDENTIAL ID · CU24_14922</span></div></article>
-          </div>
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container contact-inner">
+        <h2 class="section-title">Contact</h2>
+        <p class="contact-lead">I'm currently looking for data analyst and IT roles. My inbox is always open — I'll get back to you as soon as I can.</p>
+        <div class="contact-cards">
+          <a class="card contact-card" href="mailto:kriyankpatil165@gmail.com">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            </span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">kriyankpatil165@gmail.com</span>
+          </a>
+          <a class="card contact-card" href="https://www.linkedin.com/in/kriyank" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+            </span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">linkedin.com/in/kriyank</span>
+          </a>
+          <a class="card contact-card" href="https://github.com/kriyankpatil" target="_blank" rel="noopener">
+            <span class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.33-1.76-1.33-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.66-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.49 5.92.43.38.82 1.11.82 2.24v3.32c0 .32.21.7.82.58A12 12 0 0 0 12 .3z"/></svg>
+            </span>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/kriyankpatil</span>
+          </a>
         </div>
-      </section>
+      </div>
+    </section>
+  </main>
 
-      <section class="credentials section-space page-shell" id="credentials" aria-labelledby="credentials-title">
-        <div class="section-index reveal"><span>05</span><span>VERIFIED LEARNING</span><span class="index-line"></span></div>
-        <div class="credentials-heading reveal"><div><h2 class="display-heading" id="credentials-title">Proof of the<br><em>practice.</em></h2><p>Credentials earned through structured learning and hands-on study.</p></div><span class="credly-note"><span>↗</span> CREDLY BADGES OPEN THEIR VERIFIED PAGES</span></div>
-        <article class="featured-cert reveal">
-          <div class="cert-stamp" aria-hidden="true"><span>SAP</span><i>✳</i></div>
-          <div class="featured-cert-copy"><span class="cert-kicker">SAP CERTIFIED ASSOCIATE</span><h3>Data Analyst — SAP Analytics Cloud</h3><p>Earned through the Educate to Employ Program, an SAP India CSR initiative implemented by Edunet Foundation.</p><div class="cert-stats"><span><b>350+</b> learning hours</span><span><b>27</b> structured modules</span><span><b>2024–25</b> academic year</span></div><p class="cert-topics">Module topics: Python · pandas · Excel analysis · SAP HANA · SAP Analytics Cloud</p></div>
-          <span class="cert-mark" aria-hidden="true">↗</span>
-        </article>
-        <div class="credential-grid">
-          <a class="credential-card reveal" href="https://www.credly.com/badges/ac13c476-8d82-46d4-86ef-8c3fca05b38a" target="_blank" rel="noreferrer"><span class="credential-icon icon-green">01</span><span class="credential-provider">COURSERA</span><strong>Data Analysis &amp; Visualization Foundations Specialization (V2)</strong><span class="credential-link">View badge ↗</span></a>
-          <a class="credential-card reveal" href="https://www.credly.com/badges/de8dac53-c591-4317-bed5-013e55c3739f" target="_blank" rel="noreferrer"><span class="credential-icon icon-blue">02</span><span class="credential-provider">DATA ANALYTICS</span><strong>Data Analytics Essentials</strong><span class="credential-link">View badge ↗</span></a>
-          <a class="credential-card reveal" href="https://www.credly.com/badges/71a4400f-f9ad-4299-9cdb-8933b501db8c" target="_blank" rel="noreferrer"><span class="credential-icon icon-orange">03</span><span class="credential-provider">DATA VISUALIZATION</span><strong>Data Visualization &amp; Dashboard Essentials</strong><span class="credential-link">View badge ↗</span></a>
-          <a class="credential-card reveal" href="https://www.credly.com/badges/5e6b8480-f0bc-4ef8-9b90-497d2f2a3385" target="_blank" rel="noreferrer"><span class="credential-icon icon-purple">04</span><span class="credential-provider">MICROSOFT EXCEL</span><strong>Excel Essentials for Data Analytics</strong><span class="credential-link">View badge ↗</span></a>
-          <a class="credential-card reveal" href="https://www.credly.com/badges/d769f832-3118-44f3-bb02-fa67f48f9c86" target="_blank" rel="noreferrer"><span class="credential-icon icon-lime">05</span><span class="credential-provider">SAP ANALYTICS CLOUD</span><strong>Exploring SAP Analytics Cloud</strong><span class="credential-detail">Record of Achievement</span><span class="credential-link">View badge ↗</span></a>
-          <a class="credential-card reveal" href="https://www.credly.com/badges/30553ee7-55d9-4877-a8dd-ac3783423f20" target="_blank" rel="noreferrer"><span class="credential-icon icon-ink">06</span><span class="credential-provider">FOUNDATIONS</span><strong>Getting Started with Data</strong><span class="credential-link">View badge ↗</span></a>
-        </div>
-      </section>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Kriyank Patil. All rights reserved.</p>
+      <p class="footer-note">Data Analyst · Silvassa, India</p>
+    </div>
+  </footer>
 
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="contact-inner page-shell reveal">
-          <div class="contact-copy"><span class="contact-kicker"><i></i> OPEN TO ENTRY-LEVEL DATA ANALYST OPPORTUNITIES</span><h2 id="contact-title">Let’s make<br>the next question<br><em>count.</em></h2><p>Have a role, project, or thoughtful question in mind? I’d be glad to connect.</p><div class="contact-actions"><a class="button button-lime" href="https://www.linkedin.com/in/kriyank/" target="_blank" rel="noreferrer">Message me on LinkedIn <span aria-hidden="true">↗</span></a><a class="contact-github" href="https://github.com/kriyankpatil" target="_blank" rel="noreferrer">Or explore my GitHub <span aria-hidden="true">↗</span></a></div></div>
-          <div class="contact-art" aria-hidden="true"><svg viewBox="0 0 350 350"><circle cx="175" cy="175" r="142"/><circle cx="175" cy="175" r="105"/><circle cx="175" cy="175" r="65"/><path d="M64 229 127 170l45 29 74-106"/><circle class="contact-node" cx="127" cy="170" r="8"/><circle class="contact-node" cx="172" cy="199" r="8"/><circle class="contact-node" cx="246" cy="93" r="8"/><path class="contact-cross" d="M258 242h40m-20-20v40"/></svg><span class="contact-orbit-text">CURIOSITY IN MOTION · DATA WITH DIRECTION · </span></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer page-shell">
-      <a class="footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">KP<span>↗</span></span><span><strong>Kriyank Patil</strong><small>DATA ANALYST</small></span></a>
-      <p>Built with curiosity, careful questions, and a little code.</p>
-      <div class="footer-links"><a href="https://www.linkedin.com/in/kriyank/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/kriyankpatil" target="_blank" rel="noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div>
-      <small class="copyright">© <span id="year">2026</span> Kriyank Patil</small>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  <script>
+    // Mobile navigation toggle
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var links = document.getElementById('nav-links');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      links.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          links.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open menu');
+        }
+      });
+    })();
+  </script>
+</body>
 </html>

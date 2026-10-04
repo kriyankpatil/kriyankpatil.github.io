@@ -107,19 +107,8 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--text);
   margin-right: auto;
 }
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .brand-name { font-weight: 700; font-size: 17px; }
+.brand-dot { color: var(--accent); }
 .site-nav { display: flex; align-items: center; }
 .nav-links {
   display: flex;

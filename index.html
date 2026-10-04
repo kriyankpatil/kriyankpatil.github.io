@@ -27,11 +27,10 @@
           <li><a href="#projects">Projects</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
-          <li><a href="#resume">Resume</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="#" data-resume-download>Resume</a>
+      <a class="btn btn-primary btn-small header-cta" href="#" data-resume-modal>Resume</a>
     </div>
   </header>
 
@@ -49,7 +48,7 @@
             insights using Python, Excel, and BI tools.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#" data-resume-download>Download Resume</a>
+            <a class="btn btn-primary" href="#" data-resume-modal>Download Resume</a>
             <a class="btn btn-outline" href="#contact">Get in Touch</a>
           </div>
           <div class="social-links">
@@ -276,20 +275,6 @@
       </div>
     </section>
 
-    <!-- RESUME -->
-    <section class="section" id="resume">
-      <div class="container">
-        <h2 class="section-title">Resume</h2>
-        <div class="card resume-preview">
-          <iframe id="resume-frame" title="Kriyank Patil resume preview" loading="lazy"></iframe>
-          <p class="resume-fallback" hidden>Preview couldn't load here. <a href="#" data-resume-download>Download the resume</a> instead.</p>
-        </div>
-        <div class="resume-actions">
-          <a class="btn btn-primary" href="#" data-resume-download>Download Resume</a>
-        </div>
-      </div>
-    </section>
-
     <!-- CONTACT -->
     <section class="section section-alt" id="contact">
       <div class="container contact-inner">
@@ -321,6 +306,21 @@
       </div>
     </section>
   </main>
+
+  <!-- RESUME MODAL -->
+  <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-header">
+        <h3 id="resume-modal-title">Resume</h3>
+        <div class="modal-actions">
+          <a class="btn btn-primary btn-small" href="#" data-resume-download>Download</a>
+          <button class="modal-close" data-close-modal aria-label="Close resume preview">&times;</button>
+        </div>
+      </div>
+      <iframe id="resume-frame" title="Kriyank Patil resume preview"></iframe>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-inner">
@@ -385,26 +385,35 @@
       });
 
       var frame = document.getElementById('resume-frame');
-      if (frame) {
-        var loadPreview = function () {
-          getResumeUrl()
-            .then(function (url) { frame.src = url; })
-            .catch(function () {
-              var fb = document.querySelector('.resume-fallback');
-              if (fb) fb.hidden = false;
-            });
-        };
-        if ('IntersectionObserver' in window) {
-          var obs = new IntersectionObserver(function (entries) {
-            entries.forEach(function (en) {
-              if (en.isIntersecting) { obs.disconnect(); loadPreview(); }
-            });
-          }, { rootMargin: '400px' });
-          obs.observe(frame);
-        } else {
-          loadPreview();
-        }
+      var modal = document.getElementById('resume-modal');
+
+      function openResumeModal(e) {
+        if (e) e.preventDefault();
+        getResumeUrl()
+          .then(function (url) {
+            if (!frame.getAttribute('src')) frame.src = url;
+            modal.hidden = false;
+            document.body.classList.add('modal-open');
+            var closeBtn = modal.querySelector('.modal-close');
+            if (closeBtn) closeBtn.focus();
+          })
+          .catch(function () { window.location.href = 'assets/resume.pdf.b64'; });
       }
+
+      function closeResumeModal() {
+        modal.hidden = true;
+        document.body.classList.remove('modal-open');
+      }
+
+      document.querySelectorAll('[data-resume-modal]').forEach(function (a) {
+        a.addEventListener('click', openResumeModal);
+      });
+      modal.querySelectorAll('[data-close-modal]').forEach(function (el) {
+        el.addEventListener('click', closeResumeModal);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.hidden) closeResumeModal();
+      });
     })();
   </script>
 </body>
